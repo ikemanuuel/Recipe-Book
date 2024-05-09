@@ -1,0 +1,39 @@
+:root{
+    --primary-color:#030303;
+    --secondary-color: #D9D9D9;
+    --tertiary-color:#49403A;
+    --light-color:#ffffff;
+    --fourth-color:#E8B16F;
+    --primary-font: 'inknut antiqua';
+}
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+    ::-webkit-scrollbar {
+        width: 5px; /* Width of the scrollbar */
+      }
+      
+      /* Style the horizontal scrollbar track */
+      ::-webkit-scrollbar:horizontal{
+        height: 5px;
+        width: 1px;
+      }
+      
+      /* Style the scrollbar thumb */
+      ::-webkit-scrollbar-thumb {
+        background: #888; /* Background color of the scrollbar thumb */
+        border-radius: 20px; /* Rounded corners for the scrollbar thumb */
+      }
+      
+      /* Style the scrollbar thumb on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Background color of the scrollbar thumb on hover */
+      }
+      
+
+}

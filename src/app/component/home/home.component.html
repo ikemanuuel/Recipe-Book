@@ -1,0 +1,10 @@
+<section class="section-home">
+  <div class="hero-banner">
+    <img src="../../../assets/image/Recipe.png" alt="" />
+  </div>
+  <div class="home-section-animation">
+    <div class="left-content" *ngFor="let recipe of recipe">
+      <img [src]="recipe?.imgPath" />
+    </div>
+  </div>
+</section>

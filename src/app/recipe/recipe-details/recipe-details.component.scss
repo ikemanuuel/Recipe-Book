@@ -1,0 +1,128 @@
+.container{
+    background-color: var(--secondary-color);
+    width: 700px;
+    height: auto;
+    border-radius: 5px;
+    position: relative;
+    
+
+    .recipe-details{
+       padding-left: 10px;
+       padding-top: 10px;
+
+        .content{
+            
+
+            img{
+                height: 300px; 
+            width: 500px;
+            border-radius: 10px;
+                object-fit: cover;
+            }
+        }
+
+       .details{
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+       }
+    }
+    .button-recipe-details{
+       display: flex;
+        
+    }   
+
+    .dropdown{
+       position: absolute;
+       top: 10px;
+       right: 10px;
+    }
+
+    
+
+    .ingredients-list {
+    
+        white-space: pre-wrap;
+        padding-left: 20px;
+        list-style-type: disc;
+        width: 300px; 
+        word-wrap: break-word;
+    }
+    
+    form {
+        position: absolute;
+        margin-top: 50px;
+        width: 500px;
+        display: flex;
+        height: 300px;
+        flex-direction: column;
+        gap: 6px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px var(--primary-color);
+        top: 150px;
+        left: 150px;
+    
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da; 
+            border-radius: 4px;
+            &:focus {
+            border-color: #007bff; 
+            outline: none;
+            }
+        }
+        
+        form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            &:hover {
+            background-color: #0056b3;
+            }
+        }
+        textarea {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da; 
+            border-radius: 4px;
+            resize: none; 
+            overflow: auto; 
+        }
+        
+        textarea:focus {
+            border-color: #007bff; 
+            outline: none;
+        }
+
+        .Close {
+            background-color: #dc3545; 
+            color: var(--light-color); 
+            border: none; 
+            padding: 5px 10px;
+            border-radius: 4px; 
+            cursor: pointer; 
+            align-self: flex-end; 
+            margin-bottom: 10px; 
+            
+        }
+    
+    }
+   
+   
+}

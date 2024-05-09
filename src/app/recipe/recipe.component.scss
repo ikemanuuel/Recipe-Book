@@ -1,0 +1,29 @@
+.recipe-section{
+    // background-image: url('../../assets/image/recipe\ icon.png');
+    // background-size: contain;
+    // background-repeat: repeat;
+   
+    .container-recipe{
+        display: flex;
+        flex-direction: row;
+        margin-left: 30px ;
+        margin-right: 30px;
+        
+        gap: 50px;
+        
+        .col-1{
+            display: flex;
+          
+            width:400px;
+            
+        }
+    
+        
+        .col-2{
+            display: flex;
+            margin-top: 10px;
+            width: 400px;
+            
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<div class="list-component">
+  <div class="row-recipe-list-upper">
+    <div class="col-recipe-list-upper">
+      <button class="button-recipe-list-upper" (click)="openRecipeModal()">
+        New recipe
+      </button>
+    </div>
+  </div>
+  <hr />
+  <div class="recipe-list">
+    <app-recipe-item
+      *ngFor="let recipeEl of recipes"
+      [recipe]="recipeEl"
+      (recipeSelected)="onRecipeSelected(recipeEl)"
+      (click)="$event.preventDefault()"
+    ></app-recipe-item>
+  </div>
+  <div class="modal-container">
+    <div class="modal" [ngClass]="{ 'is-active': isModalOpen }">
+      <div class="modal-background" (click)="closeRecipeModal()"></div>
+      <div class="modal-content">
+        <h2>Add New Recipe</h2>
+        <input
+          type="text"
+          [(ngModel)]="newRecipeName"
+          placeholder="Recipe Name"
+        />
+        <input
+          type="text"
+          [(ngModel)]="newRecipeDescription"
+          placeholder="Recipe Description"
+        />
+        <input
+          class="input-field-3 expanding-input"
+          type="text"
+          [(ngModel)]="newIngredient"
+          placeholder="Ingredients"
+        />
+
+        <input type="file" (change)="onImageSelected($event)" />
+        <button (click)="addNewRecipe()">Add Recipe</button>
+      </div>
+      <button
+        class="modal-close is-large"
+        aria-label="close"
+        (click)="closeRecipeModal()"
+      >
+        X
+      </button>
+    </div>
+  </div>
+</div>

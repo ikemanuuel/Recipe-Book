@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="recipe-details">
+    <div class="content">
+      <img [src]="recipe.imgPath" alt="{{ recipe.name }}" />
+    </div>
+    <div class="details">
+      <div>
+        <span>Name:</span>
+        <h1 class="title">{{ recipe.name }}</h1>
+      </div>
+      <div>
+        <span>Description:</span>
+        <span>{{ recipe.description }}</span>
+      </div>
+      <div>Ingredients:</div>
+      <div class="ingredients-list">{{ recipe.ingredient }}</div>
+    </div>
+  </div>
+  <app-dropdown-manage
+    class="dropdown"
+    (deleteRecipe)="onDeleteRecipe()"
+    (editRecipe)="onEditRecipe()"
+  ></app-dropdown-manage>
+
+  <div *ngIf="isEditing">
+    <form (ngSubmit)="onSaveChanges()">
+      <button class="Close" (click)="closeEditForm()">X</button>
+      <label for="recipeName">Recipe Name:</label>
+      <input
+        type="text"
+        id="recipeName"
+        [(ngModel)]="recipeCopy.name"
+        name="recipeName"
+      />
+
+      <label for="recipeDescription">Description:</label>
+      <input
+        id="recipeDescription"
+        [(ngModel)]="recipeCopy.description"
+        name="recipeDescription"
+      />
+      <label for="recipeIngredient"> Ingredients:</label>
+      <textarea
+        id="recipeIngredient"
+        [(ngModel)]="recipeCopy.ingredient"
+        name="recipeIngredient"
+        rows="5"
+      ></textarea>
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+</div>

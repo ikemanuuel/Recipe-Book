@@ -1,0 +1,14 @@
+<div class="modal" [ngClass]="{ 'is-active': openRecipeModal }">
+  <div class="modal-background" (click)="closeRecipeModal()"></div>
+  <div class="modal-content">
+    <!-- Your modal content goes here, such as a form for adding a new recipe -->
+    <h2>Add New Recipe</h2>
+    <!-- Add your form for adding a new recipe here -->
+    <button (click)="addNewRecipe()">Add Recipe</button>
+  </div>
+  <button
+    class="modal-close is-large"
+    aria-label="close"
+    (click)="closeRecipeModal()"
+  ></button>
+</div>

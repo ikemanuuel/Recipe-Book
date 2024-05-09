@@ -1,0 +1,19 @@
+<section class="recipe-section">
+  <div class="container-recipe">
+    <div class="col-1">
+      <app-recipe-list
+        (recipeWasSelected)="selectedRecipe = $event"
+        (refreshList)="refreshList()"
+      ></app-recipe-list>
+    </div>
+    <div class="col-2">
+      <app-recipe-details
+        *ngIf="selectedRecipe; else infoText"
+        [recipe]="selectedRecipe"
+      ></app-recipe-details>
+      <ng-template #infoText>
+        <p>Please select a Recipe!</p>
+      </ng-template>
+    </div>
+  </div>
+</section>

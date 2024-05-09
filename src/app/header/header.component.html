@@ -1,0 +1,23 @@
+<nav>
+  <div class="container-nav">
+    <div class="details">
+      <div class="nav-left-title">
+        <!-- <a href="#/Recipe_Book">Recipe Book</a> -->
+        <span>Recipe Book</span>
+      </div>
+      <div class="nav-middle">
+        <div class="nav-bar-1">
+          <a routerLink="/home" (click)="onSelect('home')">Home</a>
+        </div>
+        <div class="nav-bar-1">
+          <a routerLink="/recipes" (click)="onSelect('recipe')">Recipes</a>
+        </div>
+        <div class="nav-bar-2">
+          <a routerLink="/shopping-list" (click)="onSelect('shopping-list')"
+            >Shopping list</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

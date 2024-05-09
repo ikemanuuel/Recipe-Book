@@ -1,0 +1,19 @@
+<div class="dropdown">
+  <button (click)="toggleDropdown()" class="dropbtn">
+    Manage recipe<svg
+      fill="#000000"
+      width="15px"
+      height="15px"
+      viewBox="0 0 32 32"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M24 11.305l-7.997 11.39L8 11.305z" />
+    </svg>
+  </button>
+  <div [class.show]="isOpen" class="dropdown-content">
+    <!-- <button routerLink="/shopping-list">To Shopping list</button> -->
+    <button (click)="onEdit()">Edit Recipe</button>
+
+    <button (click)="onDelete()">Delete Recipe</button>
+  </div>
+</div>

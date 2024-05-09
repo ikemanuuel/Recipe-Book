@@ -1,0 +1,30 @@
+<div class="shopping-list-container">
+  <div class="container">
+    <div class="input-field">
+      <app-shopping-edit
+        (ingredientAdded)="onIngredientAdded($event)"
+      ></app-shopping-edit>
+    </div>
+    <hr />
+    <div class="container-content">
+      <div class="inside" *ngFor="let ingredient of ingredients">
+        <div class="content">
+          <div class="detail-name">
+            <h2>{{ ingredient.name }}</h2>
+          </div>
+          <div class="middle-content">
+            <div class="detail-amount">
+              <p>Amount: ${{ ingredient.amount }}</p>
+            </div>
+            <!-- <button class="edit">Edit</button> -->
+          </div>
+          <div class="bottom-content">
+            <button class="delete" (click)="onDeleteIngredient(ingredient.id)">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
